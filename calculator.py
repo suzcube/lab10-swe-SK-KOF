@@ -27,6 +27,6 @@ def log(a, b): loga(b)# use math library + raise ValueError
 def exp(a, b): ab
 
 
-#lfckgkjvkhv
+#lfckgkjvkhvdsd
 
 
