@@ -1,12 +1,6 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
 
-One function per operation, in order.
-"""
-# First example
 import math
-https://github.com/suzcube/lab10-swe-SK-KOF.git
+#https://github.com/suzcube/lab10-swe-SK-KOF.git
 # Partner 1: Katie Flanagan
 # Partner 2: Suzanne Kerns
 
@@ -21,16 +15,18 @@ def mul(a, b):
     return a * b
 
 def div(a, b):
-    try:
-        return a / b
-    except ZeroDivisionError:
+    if b == 0:
+        raise ZeroDivisionError
+    return a / b
 
 def log(a, b):
-    loga(b)# use math library + raise ValueError
+    if b<0:
+        raise ValueError
+    return math.log(a,b)
 
-def exp(a, b): ab
+def exp(a, b):
+    return a**b
 
 
-#lfckgkjvkhvdsd
 
 
