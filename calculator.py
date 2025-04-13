@@ -9,12 +9,7 @@ def square_root(a):
     return math.sqrt(a)
 
 def hypotenuse(a,b):
-    if a < b:
-        return a
-    elif b < a:
-        return b
-    else:
-        return square_root(a*a + b*b)
+    return math.sqrt(a*a + b*b)
 
 def add(a, b):
     return a + b
