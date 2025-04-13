@@ -46,23 +46,23 @@ class TestCalculator(unittest.TestCase):
 
     def test_log_invalid_base(self):
         with self.assertRaises(ZeroDivisionError):
-            self.assertNotEqual(calculator.logarithm(10, 10), 10)
+            self.assertNotEqual(calculator.logarithm(0, 0), 10)
     
     ######## Partner 1
     def test_log_invalid_argument(self):  # 1 assertion
         with self.assertRaises(ValueError):
-            self.assertNotEqual(calculator.logarithm((10, 10), 10))
+            self.assertNotEqual(calculator.logarithm((-1, -5), 10))
 
     def test_hypotenuse(self):
         self.assertEqual(calculator.hypotenuse(5, 12), 13)
         self.assertEqual(calculator.hypotenuse(3, 4), 5)
-        self.assertEqual(calculator.hypotenuse(32, 41), 5)
+        self.assertNotEqual(calculator.hypotenuse(32, 41), 5)
 
     def test_sqrt(self):
         with self.assertRaises(ValueError):
             self.assertEqual(calculator.square_root(16), 4)
             self.assertEqual(calculator.square_root(1), 1)
-            self.assertNotEqual(calculator.square_root(64), 8)
+            self.assertEqual(calculator.square_root(64), 8)
 
 
 

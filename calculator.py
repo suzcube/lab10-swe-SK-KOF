@@ -28,6 +28,8 @@ def div(a, b):
 def logarithm(a, b):
     if b<0:
         raise ValueError
+    if b==0:
+        raise ZeroDivisionError
     return math.log(a,b)
 
 def exp(a, b):
