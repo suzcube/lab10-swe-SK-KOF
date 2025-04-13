@@ -51,7 +51,7 @@ class TestCalculator(unittest.TestCase):
     ######## Partner 1
     def test_log_invalid_argument(self):  # 1 assertion
         with self.assertRaises(ValueError):
-            self.assertNotEqual(calculator.logarithm((1, 10), 10))
+            self.assertNotEqual(calculator.logarithm(1, -1), 10)
 
     def test_hypotenuse(self):
         self.assertEqual(calculator.hypotenuse(5, 12), 13)
@@ -60,9 +60,9 @@ class TestCalculator(unittest.TestCase):
 
     def test_sqrt(self):
         with self.assertRaises(ValueError):
-            self.assertEqual(calculator.square_root(16), 4)
-            self.assertEqual(calculator.square_root(1), 1)
-            self.assertEqual(calculator.square_root(64), 8)
+            self.assertNotEqual(calculator.square_root(-4), 3)
+        self.assertEqual(calculator.square_root(1), 1)
+        self.assertEqual(calculator.square_root(64), 8)
 
 
 
